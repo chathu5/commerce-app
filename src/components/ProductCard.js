@@ -8,11 +8,12 @@ import wishlist from "../images/heart.webp";
 const ProductCard = (props)=> {
   const { grid,imgurl,brand,ptitle,pp,price,imgurl2,brand1,ptitle1,pp1,price1}=props;
   let location = useLocation();
+  console.log(grid);
   
   return (
     <>
     <div 
-    className={`${location.pathname === "/store" ? `gr-${grid}` : "col-3"}`}
+    className={`${location.pathname === "/product" ? `gr-${grid}` : "col-3"}`}
     >
         <Link to=":id" className="Product-Card position-relative">
           <div className="wishlist-icon position-absolute">
@@ -54,7 +55,7 @@ const ProductCard = (props)=> {
             </Link> 
     </div>
     <div 
-    className={`${location.pathname === "/store" ? `gr-${grid}` : "col-3"}`}
+    className={`${location.pathname === "/product" ? `gr-${grid}` : "col-3"}`}
     >
         <Link to=":id" className="Product-Card position-relative">
           <div className="wishlist-icon position-absolute">

@@ -20,6 +20,7 @@ import Container from '../components/Container';
 
 const OutStore = () => {
   const [grid, setGrid] = useState(4);
+
   const availableColors =  ['#F0F8FF','#FAEBD7', '#FFD700','#D3D3D3', '#F5F5DC', '#FFB6C1', '#E0FFFF','#F0FFF0', '#E6E6FA',  '#FFFACD',
     '#000000', '#2C3E50', '#34495E', '#2E8B57', '#8B0000', '#4B0082', '#556B2F', '#A52A2A', '#708090', '#800080',];
 return (
@@ -227,11 +228,12 @@ return (
                 <p className="mb-0 d-block" style={{width:"100px"}}>Sort By:</p>
                 <select 
                     name=""
+                    defaultValue={"manual"}
                     className="form-control form-select"
                     id=""
-                  >
+                  >    
                       <option value="manual">Featured</option>
-                      <option value="best-selling" selected="selected">Best Selling
+                      <option value="best-selling" >Best Selling
                       </option>
                       <option Value="title-ascending">Alphabetically , A-Z</option>
                       <option value="title-descending">Alphabetically, Z-A</option>
